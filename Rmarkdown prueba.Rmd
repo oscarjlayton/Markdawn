@@ -1,0 +1,133 @@
+---
+title: "Rmakdown1"
+author: "ojulian"
+date: "2023-02-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+[Da click aquí para ingresar a la documentación](https://bookdown.org/Rcduarte/cursor2021/rmarkdown.html)
+
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+* Consider the option  _include=TRUE_ that print de code and  _include=FALSE_  not consider de code.
+
+
+```{r pressure, echo=FALSE}
+plot(pressure)   #{r pressure, echo=FALSE}
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+the other hand, the `echo = FALSE` parameter was added the next chunk and it generated the plot with code.
+
+```{r chunk1,  echo=TRUE}  
+hist(pressure$temperature)      #{r pressure, echo=TRUE}
+```
++ include = FALSEevita que el código y los resultados aparezcan en el archivo terminado. R Markdown aún ejecuta el código en el fragmento y los resultados pueden ser utilizados por otros fragmentos.
++ echo = FALSEevita que el código, pero no los resultados, aparezca en el archivo terminado. Esta es una forma útil de incrustar figuras.
++ message = FALSEevita que los mensajes generados por el código aparezcan en el archivo terminado.
++ warning = FALSEevita que las advertencias generadas por el código aparezcan en el terminado.
+fig.cap = "..."agrega un título a los resultados gráficos.
+
+
+
+
+Plain text.
+End a line with two spaces to
+start a new paragraph.
+Also end with a backslash\
+to make a new line.
+
+#----------------------------------------------------------
+
+*italics* and **bold**
+superscript^2^/subscript~2~
+~~strikethrough~~
+escaped: \* \_ \\
+endash: --, emdash: ---
+
+#----------------------------------------------------------
+
+# Header 1
+## Header 2
+...
+###### Header 6
+
+#----------------------------------------------------------
+
+- unordered list
+- item 2
+ - item 2a (indent 1 tab)
+ - item 2b
+1. ordered list
+2. item 2
+ - item 2a (indent 1 tab)
+ - item 2b
+ 
+
+
+# LINKS
+ 
+ <https://jdariasl.github.io/ML_2020/Labs/Intro/Intro.html>
+ 
+[This is a link.](https://jdariasl.github.io/ML_2020/Labs/Intro/Intro.html)
+
+# PHOTOS
+
+[This is another link][id].
+ At the end of the document:
+ [id]: link url
+![Caption](photo1.png)
+or ![Caption][id2]
+ At the end of the document:
+ [id2]: image.png 
+
+# FORMULAS MATEMÁTICAS
+
+`verbatim code`
+```
+multiple lines
+of verbatim code
+```
+> block quotes
+equation: $e^{i \pi} + 1 = 0$
+equation block:
+$$E = mc^{2}$$
+horizontal rule:
+---
+
+# TABLAS
+
+| Right | Left | Default | Center |
+|-------:|:------|-----------|:---------:|
+| 12 | 12 | 12 | 12 |
+| 123 | 123 | 123 | 123 |
+| 1 | 1 | 1 | 1 |
+
+
+# TABLAS
+ # Results {.tabset}
+ ## Plots text
+ text
+ ## Tables
+ more text
+ 
+
